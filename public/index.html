@@ -10,6 +10,7 @@
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <!--endbuild-->
 </head>
 
@@ -33,6 +34,10 @@
     </main>
     <footer>
         <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
+        <ul class="share_group" id="share-group">
+            <a v-for="icon in shareIcons" :href="icon.url"><li @mouseenter="infoText=icon.description" @mouseleave="infoText=''" :class="[icon.iconClass, iClass]" aria-hidden="true"></li></a>
+        </ul>
+        <p class="info_mes">{{infoText}}</p>
     </footer>
 </body>
 

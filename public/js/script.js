@@ -15,7 +15,7 @@
          this.timeGet();
          setInterval(this.timeGet, 1000);
      }
- })
+ });
 
  var cardVM = new Vue({
      el: '#card-group',
@@ -41,5 +41,24 @@
              image: './images/pic7.png',
              url: 'http://aurora.velascamp.cn'
          }]
+     }
+ });
+
+ var shareGroup = new Vue({
+     el: 'footer',
+     data: {
+         iClass:'fa fa-lg',
+         infoText:'',
+         shareIcons: [{
+                 url: 'https://github.com/Reedo0910',
+                 iconClass: 'fa-github',
+                 description: 'View me on Github.'
+             }, {
+                 url: 'mailto:sea.sand@live.cn',
+                 iconClass: 'fa-envelope',
+                 description: 'Send me an Email.'
+             }
+         ],
+
      }
  })
