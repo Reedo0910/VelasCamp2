@@ -27,6 +27,7 @@
     "fsevents": "*"
   },
   "dependencies": {
+    "gifsicle": "^3.0.4",
     "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.0"
   }
