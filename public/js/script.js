@@ -1,3 +1,26 @@
+ var timePanel = new Vue({
+     el: '#time-panel',
+     data: {
+         currentTime: '',
+     },
+     methods: {
+         timeGet: function () {
+             var now = new Date();
+             var hour = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+             var minute = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+             this.currentTime = hour + ':' + minute;
+         }
+     },
+     mounted: {
+         setTime: function () {
+             this.timeGet();
+             setInterval(this.timeGet, 1000);
+         }
+     }
+
+ })
+
+
  var cardVM = new Vue({
      el: '#card-group',
      data: {
