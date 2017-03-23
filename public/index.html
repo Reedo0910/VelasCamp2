@@ -17,13 +17,13 @@
     <header>
         <a class="logo" id="logo" href="http://www.velascamp.cn">
             <p>Velas Camp</p>
-            <p class="sub">Born to be an explorer.</p>
+            <p class="sub">Born to be a creator.</p>
         </a>
-        <div class="time_panel" id="time-panel">{{currentTime}}</div>
+        <div class="time_panel" id="time-panel" v-cloak>{{currentTime}}</div>
         <div class="dl"></div>
     </header>
     <main>
-        <div class="card_group" id="card-group">
+        <div class="card_group" id="card-group" v-cloak>
             <a :href="workscard.url" class="works_card" v-for="workscard in worksCards">
                 <h2 class="card_title">{{workscard.name}}</h2>
                 <img :src="workscard.image">
