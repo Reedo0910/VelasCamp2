@@ -20,7 +20,7 @@ header {
     text-decoration: none;
     display: block;
     height: 35px;
-    width: 240px;
+    width: 115px;
     background-image: url("../images/Campfire_black.png");
     background-repeat: no-repeat;
     background-position: left center;
@@ -138,7 +138,7 @@ footer {
     color: #888; }
   footer ul.share_group {
     float: right;
-    margin: 6px 5% 0 0;
+    margin: 3px 5% 0 0;
     padding: 0; }
     footer ul.share_group a {
       color: #888;
@@ -185,5 +185,10 @@ footer {
     display: none; } }
 
 @media screen and (max-width: 425px) {
-  header .time_panel {
-    display: none; } }
+  header {
+    text-align: center; }
+    header .time_panel {
+      display: none; }
+    header .logo {
+      display: inline-block;
+      text-align: left; } }

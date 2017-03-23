@@ -29,7 +29,7 @@ header {
         text-decoration: none;
         display: block;
         height: 35px;
-        width: 240px;
+        width: 115px;
         background: {
             image: url('../images/Campfire_black.png');
             repeat: no-repeat;
@@ -162,7 +162,7 @@ footer {
     }
     ul.share_group {
         float: right;
-        margin: 6px 5% 0 0;
+        margin: 3px 5% 0 0;
         padding: 0;
         a {
             color: #888;
@@ -220,7 +220,14 @@ footer {
 }
 
 @media screen and (max-width: 425px) {
-    header .time_panel {
-        display: none;
+    header {
+        text-align: center;
+        .time_panel {
+            display: none;
+        }
+        .logo {
+            display: inline-block;
+            text-align: left;
+        }
     }
 }
