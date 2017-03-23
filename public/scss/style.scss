@@ -1,0 +1,172 @@
+//过渡动画样式
+@mixin link-transition($time) {
+    -webkit-transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    transition: all $time ease-out;
+}
+
+@font-face {
+    font-family: 'NotoSansHans-Regular';
+    src: url(../fonts/NotoSansHans-Regular.ttf);
+    src: url(../fonts/NotoSansHans-Regular.eot);
+}
+
+body {
+    background-color: #eee;
+    font-family: "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+}
+
+header {
+    background-color: #eee;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    .logo {
+        text-decoration: none;
+        display: block;
+        font-family: 'NotoSansHans-Regular';
+        height: 35px;
+        width: 240px;
+        background: {
+            image: url('../images/Campfire_black.png');
+            repeat: no-repeat;
+            position: left center;
+            size: 35px 35px;
+        }
+        padding-left: 45px;
+        margin: 15px 50px;
+        p {
+            font: {
+                size: 1.2em;
+                weight: 300;
+            }
+            margin: 0;
+        }
+        p.sub {
+            font-size: .5em;
+            color: #aaa;
+        }
+    }
+    .time_panel {
+        position: absolute;
+        top: 50%;
+        right: 80px;
+        color: #aaa;
+        font-weight: 300;
+    }
+    .dl {
+        height: 1px;
+        width: 95%;
+        background-color: #bbb;
+        margin: 0 auto;
+    }
+}
+
+main {
+    min-height: 600px;
+    .card_group {
+        padding: 120px 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .works_card {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 80px 45px;
+            flex-shrink: 0;
+            border: #eee 3px solid;
+            padding: 8px;
+            position: relative;
+            text-decoration: none;
+            @include link-transition(0.2s);
+            .card_title,
+            .card_description {
+                position: absolute;
+                font-weight: 300;
+                @include link-transition(0.2s);
+            }
+            .card_title {
+                opacity: .3;
+                color: #444;
+                top: -70px;
+            }
+            .card_description {
+                opacity: 0;
+                color: #888;
+                top: 220px;
+                max-height: 85px;
+                overflow: hidden;
+            }
+            img {
+                display: block;
+                width: 100%;
+                opacity: .85;
+                @include link-transition(0.2s);
+                box-shadow: #d6d6d6 0 0 20px;
+            }
+            &:hover {
+                @include link-transition(0.2s);
+                border-color: #d2d2d2;
+                .card_title,
+                .card_description,
+                img {
+                    opacity: 1;
+                    @include link-transition(0.2s);
+                }
+                img {
+                    box-shadow: #ccc 0 0 30px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ddd;
+    padding: 10px 5px 3px;
+    .avatar {
+        display: block;
+        text-decoration: none;
+        color: #444;
+        font-family: 'NotoSansHans-Regular';
+        height: 35px;
+        width: 240px;
+        background: {
+            image: url(https://avatars2.githubusercontent.com/u/19267441?v=3&s=460);
+            repeat: no-repeat;
+            position: left center;
+            size: 35px 35px;
+        }
+        padding-left: 45px;
+        margin: 10px 50px;
+        font-weight: 300;
+        p {
+            color: #888;
+            font-size: .5em;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-device-width: 425px) {
+    header .time_panel {
+        display: none;
+    }
+    main .card_group .works_card .card_description,
+    main .card_group .works_card .card_title {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    main .card_group {
+        justify-content: space-around;
+    }
+    main .card_group .works_card {
+        margin: 80px 30px;
+    }
+}

@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Velas Camp</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./js/vue.js"></script>
+    <!--build:css css/style.min.css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--endbuild-->
 </head>
+
 <body>
-    
+    <header>
+        <a class="logo" id="logo" href="http://www.velascamp.cn">
+            <p>Velas Camp</p>
+            <p class="sub">Born to be an explorer.</p>
+        </a>
+        <div class="time_panel" id="time-panel"></div>
+        <div class="dl"></div>
+    </header>
+    <main>
+        <div class="card_group" id="card-group">
+            <a :href="workscard.url" class="works_card" v-for="workscard in worksCards">
+                <h2 class="card_title">{{workscard.name}}</h2>
+                <img :src="workscard.image">
+                <p class="card_description">{{workscard.description}}</p>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
+    </footer>
 </body>
+
+<!--build:js js/index.min.js -->
+<script src="./js/script.js"></script>
+<!--endbuild-->
+
 </html>
