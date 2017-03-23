@@ -37,16 +37,3 @@
      var minute = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
      time.innerHTML = hour + ':' + minute;
  }
-
- //获取天气
- Weather.getCurrent("Kansas City", function(current) {
-  console.log(
-    ["currently:",current.temperature(),"and",current.conditions()].join(" ")
-  );
-});
-
-Weather.getForecast("Kansas City", function(forecast) {
-  console.log("Forecast High in Kelvin: " + forecast.high());
-  console.log("Forecast High in Fahrenheit" + Weather.kelvinToFahrenheit(forecast.high()));
-  console.log("Forecast High in Celsius" + Weather.kelvinToCelsius(forecast.high()));
-});
