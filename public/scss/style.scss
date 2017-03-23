@@ -132,11 +132,11 @@ footer {
     background-color: #ddd;
     padding: 10px 5px 3px;
     .avatar {
-        display: block;
+        width: 70px;
+        display: inline-block;
         text-decoration: none;
         color: #444;
         height: 35px;
-        width: 240px;
         background: {
             image: url(../images/avatar.jpg);
             repeat: no-repeat;
@@ -153,19 +153,17 @@ footer {
         }
     }
     p.info_mes {
-        position: absolute;
-        right: 250px;
-        bottom: 10px;
+        float: right;
         font-size: 12px;
         background-color: #ddd;
         padding: 4px;
+        margin-right: 8px;
         color: #888;
     }
     ul.share_group {
-        margin: 0;
-        position: absolute;
-        bottom: 15px;
-        right: 5%;
+        float: right;
+        margin: 6px 5% 0 0;
+        padding: 0;
         a {
             color: #888;
             text-decoration: none;
@@ -197,7 +195,8 @@ footer {
 
 @media screen and (max-device-width:1024px) {
     main .card_group .works_card .card_description,
-    main .card_group .works_card .card_title {
+    main .card_group .works_card .card_title,
+    main .card_group .works_card img {
         opacity: 1;
     }
 }

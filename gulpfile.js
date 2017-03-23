@@ -55,11 +55,6 @@ gulp.task('movevue', function () {
         .pipe(gulp.dest('dist/js'))
 })
 
-gulp.task('movefiles', function () {
-    return gulp.src('public/log.json.js')
-        .pipe(gulp.dest('dist'))
-})
-
 gulp.task('browserSync', function () {
     browserSync({
         server: {
@@ -79,12 +74,11 @@ gulp.task('useref', function () {
 gulp.task('watch', ['browserSync', 'sass'], function () {
     gulp.watch('public/scss/**/*.+(sass|scss)', ['sass'])
     gulp.watch('public/js/**/*.js', browserSync.reload)
-    gulp.watch('public/components/**/*.js', browserSync.reload)
     gulp.watch('public/**/*.html', browserSync.reload)
 })
 
 gulp.task('build', function (callback) {
-    runSequence('clean:dist', 'sass', ['useref', 'images', 'fonts', 'favicon', 'movevue', 'movefiles'], callback)
+    runSequence('clean:dist', 'sass', ['useref', 'images', 'fonts', 'favicon', 'movevue'], callback)
 })
 
 gulp.task('default', function (callback) {

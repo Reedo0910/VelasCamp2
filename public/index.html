@@ -6,7 +6,7 @@
     <title>Velas Camp</title>
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="./js/vue.js"></script>
+    <script src="./js/vue.min.js"></script>
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -35,9 +35,11 @@
     <footer>
         <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
         <ul class="share_group" id="share-group" v-cloak>
-            <a v-for="icon in shareIcons" :href="icon.url"><li @mouseenter="infoText=icon.description" @mouseleave="infoText=''" :class="[icon.iconClass, iClass]" aria-hidden="true"></li></a>
+            <a v-for="icon in shareIcons" :href="icon.url">
+                <li @mouseenter="infoText=icon.description" @mouseleave="infoText=''" :class="[icon.iconClass, iClass]" aria-hidden="true"></li>
+            </a>
         </ul>
-        <p class="info_mes" v-cloak>{{infoText}}</p>
+        <p v-show="infoText!=0" class="info_mes" v-cloak>{{infoText}}</p>
     </footer>
 </body>
 
