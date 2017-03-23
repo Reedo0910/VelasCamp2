@@ -29,7 +29,7 @@ header {
         text-decoration: none;
         display: block;
         height: 35px;
-        width: 115px;
+        width: 120px;
         background: {
             image: url('../images/Campfire_black.png');
             repeat: no-repeat;
@@ -228,6 +228,11 @@ footer {
         .logo {
             display: inline-block;
             text-align: left;
+        }
+    }
+    main {
+        .card_group {
+            padding-top: 75px;
         }
     }
 }
