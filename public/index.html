@@ -40,8 +40,8 @@
     <footer>
         <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
         <ul class="share_group" id="share-group" v-cloak>
-            <a v-for="icon in shareIcons" :href="icon.url">
-                <li @mouseenter="infoText=icon.description" @mouseleave="infoText=''" :class="[icon.iconClass, iClass]" aria-hidden="true"></li>
+            <a v-for="icon in shareIcons" :href="icon.url" @mouseenter="infoText=icon.description" @mouseleave="infoText=''">
+                <li :class="[icon.iconClass, iClass]" aria-hidden="true"></li>
             </a>
         </ul>
         <p v-show="infoText!=0" class="info_mes" v-cloak>{{infoText}}</p>
