@@ -238,6 +238,7 @@ footer {
         padding: 4px;
         margin-right: 8px;
         color: #888;
+        font-family: FontAwesome;
     }
     ul.share_group {
         float: right;
@@ -267,6 +268,9 @@ footer {
             }
             &:nth-child(2):hover li {
                 background-color: #17b2ec;
+            }
+            &:nth-child(3):hover li {
+                background-color: #e91e63;
             }
         }
     }
@@ -301,7 +305,8 @@ footer {
         p.info_mes {
             display: none;
         }
-        ul.share_group a li.fa-github {
+        ul.share_group a li.fa-github,
+        ul.share_group a li.fa-question {
             display: none;
         }
     }

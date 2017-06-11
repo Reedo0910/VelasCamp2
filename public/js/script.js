@@ -161,9 +161,7 @@
              var cards = this.filterCards;
              var count = 0;
              for (i in cards) {
-                 if (cards[i].category === c) {
-                     count++;
-                 }
+                 cards[i].category === c ? count++ : '';
              }
              return count;
          }
@@ -184,6 +182,9 @@
              url: 'mailto:sea.sand@live.cn',
              iconClass: 'fa-envelope',
              description: 'Send me an Email.'
+         }, {
+             iconClass: 'fa-question',
+             description: ' means the site uses Responsive Design.'
          }],
 
      }

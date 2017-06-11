@@ -205,7 +205,8 @@ footer {
     background-color: #ddd;
     padding: 4px;
     margin-right: 8px;
-    color: #888; }
+    color: #888;
+    font-family: FontAwesome; }
   footer ul.share_group {
     float: right;
     margin: 3px 5% 0 0;
@@ -235,6 +236,8 @@ footer {
         background-color: #545454; }
       footer ul.share_group a:nth-child(2):hover li {
         background-color: #17b2ec; }
+      footer ul.share_group a:nth-child(3):hover li {
+        background-color: #e91e63; }
 
 @media screen and (max-device-width: 1024px) {
   main .card_group .works_card .card_description,
@@ -253,7 +256,8 @@ footer {
 @media screen and (max-width: 700px) {
   footer p.info_mes {
     display: none; }
-  footer ul.share_group a li.fa-github {
+  footer ul.share_group a li.fa-github,
+  footer ul.share_group a li.fa-question {
     display: none; } }
 
 @media screen and (max-width: 425px) {
