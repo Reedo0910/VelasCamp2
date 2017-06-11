@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-title" content="Velas Camp">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./images/retinahd_icon.png">
     <meta name="theme-color" content="#eeeeee">
-    <script src="./js/vue.min.js"></script>
+    <script src="./js/vue.js"></script>
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -29,12 +29,18 @@
         <div class="dl"></div>
     </header>
     <main>
-        <div class="card_group" id="card-group" v-cloak>
-            <a :href="workscard.url" class="works_card" v-for="workscard in worksCards">
-                <h2 class="card_title">{{workscard.name}}</h2>
-                <img :src="workscard.image">
-                <p class="card_description">{{workscard.description}}</p>
-            </a>
+        <div id="card-group" v-cloak>
+            <input class="key_box" type="text" v-model="key" placeholder="Search">
+            <div class="category" v-for="category in categories">
+                <h3 class="category_title">{{category}}</h3>
+                <div class="card_group">
+                    <a :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category == category">
+                        <h2 class="card_title">{{workscard.name}}</h2>
+                        <img :src="workscard.image">
+                        <p class="card_description">{{workscard.description}}</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

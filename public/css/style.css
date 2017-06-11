@@ -47,17 +47,46 @@ header {
     margin: 0 auto; }
 
 main {
+  padding: 135px 20px 120px;
+  position: relative;
   min-height: 600px; }
-  main .card_group {
-    padding: 120px 20px;
+  main .key_box {
+    width: 270px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    outline: none;
+    border: #ddd 1px solid;
+    color: #888;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    font-weight: 300; }
+    main .key_box:focus {
+      border-color: #aaa;
+      color: #444; }
+  main .category .category_title {
+    margin: 0;
+    color: #888;
+    font-weight: 300;
+    padding: 10px 50px;
+    cursor: default; }
+  main .category .card_group {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap; }
-    main .card_group .works_card {
+    main .category .card_group .works_card {
       display: block;
       width: 200px;
       height: 200px;
-      margin: 80px 45px;
+      margin: 55px 45px 85px;
       flex-shrink: 0;
       border: #eee 3px solid;
       padding: 8px;
@@ -66,24 +95,25 @@ main {
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
-      main .card_group .works_card .card_title,
-      main .card_group .works_card .card_description {
+      main .category .card_group .works_card .card_title,
+      main .category .card_group .works_card .card_description {
         position: absolute;
         font-weight: 300;
         -webkit-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out; }
-      main .card_group .works_card .card_title {
+      main .category .card_group .works_card .card_title {
         opacity: .3;
         color: #444;
-        top: -70px; }
-      main .card_group .works_card .card_description {
+        top: -50px;
+        margin: 0; }
+      main .category .card_group .works_card .card_description {
         opacity: 0;
         color: #888;
-        top: 220px;
+        top: 215px;
         max-height: 85px;
         overflow: hidden; }
-      main .card_group .works_card img {
+      main .category .card_group .works_card img {
         display: block;
         width: 100%;
         opacity: .85;
@@ -91,19 +121,19 @@ main {
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
         box-shadow: #d6d6d6 0 0 20px; }
-      main .card_group .works_card:hover {
+      main .category .card_group .works_card:hover {
         -webkit-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
         border-color: #d2d2d2; }
-        main .card_group .works_card:hover .card_title,
-        main .card_group .works_card:hover .card_description,
-        main .card_group .works_card:hover img {
+        main .category .card_group .works_card:hover .card_title,
+        main .category .card_group .works_card:hover .card_description,
+        main .category .card_group .works_card:hover img {
           opacity: 1;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out; }
-        main .card_group .works_card:hover img {
+        main .category .card_group .works_card:hover img {
           box-shadow: #ccc 0 0 30px; }
 
 footer {
@@ -173,10 +203,12 @@ footer {
     opacity: 1; } }
 
 @media screen and (max-width: 768px) {
-  main .card_group {
+  main .key_box {
+    width: 200px; }
+  main .category .card_group {
     justify-content: space-around; }
-  main .card_group .works_card {
-    margin: 80px 30px; } }
+    main .category .card_group .works_card {
+      margin: 55px 30px 80px; } }
 
 @media screen and (max-width: 700px) {
   footer p.info_mes {
@@ -192,5 +224,11 @@ footer {
     header .logo {
       display: inline-block;
       text-align: left; }
-  main .card_group {
-    padding-top: 75px; } }
+  main {
+    padding-top: 80px; }
+    main .key_box {
+      display: none; }
+    main .category .category_title {
+      display: none; }
+    main .category .card_group {
+      padding-top: 0; } }
