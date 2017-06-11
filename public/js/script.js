@@ -153,11 +153,7 @@
      },
      watch: {
          key: function () {
-             if (this.key != '') {
-                 this.isClearShow = true;
-             } else {
-                 this.isClearShow = false;
-             }
+             this.key != '' ? this.isClearShow = true : this.isClearShow = false;
          }
      },
      methods: {
@@ -170,9 +166,6 @@
                  }
              }
              return count;
-         },
-         clearText: function () {
-             this.key = '';
          }
      }
  });

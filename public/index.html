@@ -33,7 +33,7 @@
             <div class="search_box">
                 <input class="key_box" type="text" v-model.trim="key" placeholder="Enter words">
                 <transition name="fade">
-                    <button class="clear_btn" @click="clearText" v-show="isClearShow"></button>
+                    <button class="clear_btn" @click="key = ''" v-show="isClearShow"></button>
                 </transition>
             </div>
             <div class="category" v-for="category in categories">
