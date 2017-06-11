@@ -30,12 +30,17 @@
     </header>
     <main>
         <div id="card-group" v-cloak>
-            <input class="key_box" type="text" v-model="key" placeholder="Search">
+            <div class="search_box">
+                <input class="key_box" type="text" v-model.trim="key" placeholder="Enter words">
+                <transition name="fade">
+                    <button class="clear_btn" @click="clearText" v-show="isClearShow"></button>
+                </transition>
+            </div>
             <div class="category" v-for="category in categories">
-                <h3 class="category_title">{{category}}</h3>
+                <h3 class="category_title">{{category}}<span>{{categoryCount(category)}}</span></h3>
                 <div class="card_group">
-                    <a :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category == category">
-                        <h2 class="card_title">{{workscard.name}}</h2>
+                    <a :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category === category">
+                        <h2 class="card_title">{{workscard.name}}<i :class="workscard.mobile ? isAdapt : ''" aria-hidden="true"></i></h2>
                         <img :src="workscard.image">
                         <p class="card_description">{{workscard.description}}</p>
                     </a>
@@ -46,11 +51,13 @@
     <footer>
         <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
         <ul class="share_group" id="share-group" v-cloak>
-            <a v-for="icon in shareIcons" :href="icon.url" @mouseenter="infoText=icon.description" @mouseleave="infoText=''">
+            <a v-for="icon in shareIcons" :href="icon.url" @mouseenter="infoText=icon.description, isInfoShow = true" @mouseleave="isInfoShow=false">
                 <li :class="[icon.iconClass, iClass]" aria-hidden="true"></li>
             </a>
         </ul>
-        <p v-show="infoText!=0" class="info_mes" v-cloak>{{infoText}}</p>
+        <transition name="fade">
+            <p v-show="isInfoShow" class="info_mes" v-cloak>{{infoText}}</p>
+        </transition>
     </footer>
 </body>
 

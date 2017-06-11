@@ -95,52 +95,84 @@
      el: '#card-group',
      data: {
          key: '',
+         isClearShow: false,
+         isAdapt: 'fa fa-mobile',
          categories: ['Website', 'Demo', 'Playground'],
          worksCards: [{
              name: 'Velas Website',
              description: 'Dedicate to showing personal favorites and hobbies.',
              image: './images/pic1.png',
              url: 'http://www.velas.xyz',
-             category: 'Website'
+             category: 'Website',
+             mobile: false
          }, {
              name: 'My Blog',
              description: 'Just write something.',
              image: './images/pic6.png',
              url: 'http://blog.velas.xyz',
-             category: 'Website'
+             category: 'Website',
+             mobile: true
          }, {
              name: 'Chat Room',
              description: 'A chat room demo based on React and Meteor.',
              image: './images/pic2.png',
              url: 'http://chat.velascamp.cn',
-             category: 'Demo'
+             category: 'Demo',
+             mobile: true
          }, {
              name: 'Aurora',
              description: 'A music player based on HTML5.',
              image: './images/pic7.png',
              url: 'http://aurora.velascamp.cn',
-             category: 'Demo'
+             category: 'Demo',
+             mobile: false
          }, {
              name: 'Vue Login',
              description: 'Use Vue to implement the user\'s personal information input card.',
              image: './images/pic8.png',
              url: 'http://www.velascamp.cn/playground/vuelogin/index.html',
-             category: 'Playground'
+             category: 'Playground',
+             mobile: false
          }, {
              name: 'Process Schedule',
              description: 'A Course Design for Operating System Process Scheduling Model.',
              image: './images/pic5.png',
              url: 'http://www.velascamp.cn/demo/ProcessSchedule/index.html',
-             category: 'Demo'
+             category: 'Demo',
+             mobile: false
          }]
      },
      computed: {
          filterCards: function () {
-             var key = this.key.trim();
+             var key = this.key;
              var worksCards = this.worksCards;
              return worksCards.filter(function (workscard) {
                  return workscard.name.toLowerCase().indexOf(key.toLowerCase()) != -1
              });
+         }
+     },
+     watch: {
+         key: function () {
+             if (this.key != '') {
+                 this.isClearShow = true;
+             } else {
+                 this.isClearShow = false;
+             }
+         }
+     },
+     methods: {
+         categoryCount: function (c) {
+             var cards = this.filterCards;
+             var count = 0;
+             for (i in cards) {
+                 if (cards[i].category === c) {
+                     count++;
+                 }
+             }
+             return count;
+         },
+         clearText: function () {
+             this.key = '';
          }
      }
  });
@@ -150,6 +182,7 @@
      data: {
          iClass: 'fa fa-lg',
          infoText: '',
+         isInfoShow: false,
          shareIcons: [{
              url: 'https://github.com/Reedo0910',
              iconClass: 'fa-github',
