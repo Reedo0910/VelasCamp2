@@ -280,10 +280,12 @@ footer {
 }
 
 @media screen and (max-device-width:1024px) {
-    main .card_group .works_card .card_description,
-    main .card_group .works_card .card_title,
-    main .card_group .works_card img {
-        opacity: 1;
+    main .category .card_group .works_card {
+        .card_description,
+        .card_title,
+        img {
+            opacity: 1;
+        }
     }
 }
 

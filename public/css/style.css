@@ -242,9 +242,9 @@ footer {
         background-color: #e91e63; }
 
 @media screen and (max-device-width: 1024px) {
-  main .card_group .works_card .card_description,
-  main .card_group .works_card .card_title,
-  main .card_group .works_card img {
+  main .category .card_group .works_card .card_description,
+  main .category .card_group .works_card .card_title,
+  main .category .card_group .works_card img {
     opacity: 1; } }
 
 @media screen and (max-width: 768px) {
