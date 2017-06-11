@@ -79,7 +79,7 @@ main {
       background-color: transparent;
       border: none;
       background-image: url("../images/clear.png");
-      background-size: cover;
+      background-size: 12px;
       background-repeat: no-repeat;
       outline: none;
       cursor: pointer; }
@@ -106,6 +106,8 @@ main {
       opacity: .5; }
       main .search_box .key_box:focus {
         opacity: 1; }
+      main .search_box .key_box::-ms-clear {
+        display: none; }
   main .category .category_title {
     margin: 0;
     color: #888;
