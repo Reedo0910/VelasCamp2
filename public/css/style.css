@@ -206,7 +206,7 @@ footer {
     padding: 4px;
     margin-right: 8px;
     color: #888;
-    font-family: FontAwesome; }
+    font-family: FontAwesome 'NotoSansHans-Regular', "Microsoft YaHei", 微软雅黑, Arial, sans-serif; }
   footer ul.share_group {
     float: right;
     margin: 3px 5% 0 0;
