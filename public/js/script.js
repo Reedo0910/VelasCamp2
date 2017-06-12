@@ -132,7 +132,7 @@
              image: './images/pic8.png',
              url: 'http://www.velascamp.cn/playground/vuelogin/index.html',
              category: 'Playground',
-             mobile: false
+             mobile: true
          }, {
              name: 'Process Schedule',
              description: 'A Course Design for Operating System Process Scheduling Model.',
