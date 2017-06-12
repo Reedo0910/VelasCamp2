@@ -136,10 +136,17 @@
          }, {
              name: 'Process Schedule',
              description: 'A Course Design for Operating System Process Scheduling Model.',
-             image: './images/pic5.png',
+             image: './images/pic3.png',
              url: 'http://www.velascamp.cn/demo/ProcessSchedule/index.html',
              category: 'Demo',
              mobile: false
+         },{
+             name: 'Save Whales',
+             description: 'A public website on whale protection.',
+             image: './images/pic5.png',
+             url: 'http://savewhales.velascamp.cn/',
+             category: 'Website',
+             mobile: true
          }]
      },
      computed: {
