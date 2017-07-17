@@ -104,7 +104,7 @@
              image: './images/pic1.png',
              url: 'http://www.velas.xyz',
              category: 'Website',
-             mobile: false
+             mobile: true
          }, {
              name: 'My Blog',
              description: 'Just write something.',
