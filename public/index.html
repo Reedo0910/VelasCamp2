@@ -41,7 +41,7 @@
                 <h3 class="category_title">{{category}}<span>{{categoryCount(category)}}</span></h3>
                 <div class="card_group">
                     <a :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category === category">
-                        <h2 class="card_title">{{workscard.name}}<i :class="workscard.mobile ? isAdapt : ''" aria-hidden="true"></i></h2>
+                        <h2 class="card_title"><div class="title_text">{{workscard.name}}</div><i :class="workscard.mobile ? isAdapt : ''" aria-hidden="true"></i></h2>
                         <img :src="workscard.image">
                         <p class="card_description">{{workscard.description}}</p>
                     </a>

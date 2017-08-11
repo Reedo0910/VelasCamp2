@@ -142,7 +142,7 @@
              mobile: true
          },{
              name: 'Save Whales',
-             description: 'A public website on whale protection.',
+             description: 'Dedicated to whales protection and propaganda.',
              image: './images/pic5.png',
              url: 'http://savewhales.velascamp.cn/',
              category: 'Website',
