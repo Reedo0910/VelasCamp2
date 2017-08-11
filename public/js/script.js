@@ -139,7 +139,7 @@
              image: './images/pic3.png',
              url: 'http://www.velascamp.cn/demo/ProcessSchedule/index.html',
              category: 'Demo',
-             mobile: false
+             mobile: true
          },{
              name: 'Save Whales',
              description: 'A public website on whale protection.',
