@@ -207,7 +207,7 @@ footer {
     background-position: left center;
     background-size: 35px 35px;
     padding-left: 45px;
-    margin: 6px 50px 10px 5%;
+    margin: 6px 10px 10px 5%;
     font-weight: 300; }
     footer .avatar p {
       color: #888;
@@ -246,12 +246,16 @@ footer {
         -webkit-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out; }
-      footer ul.share_group a:nth-child(1):hover li {
-        background-color: #545454; }
       footer ul.share_group a:nth-child(2):hover li {
-        background-color: #17b2ec; }
+        background-color: #545454; }
       footer ul.share_group a:nth-child(3):hover li {
+        background-color: #17b2ec; }
+      footer ul.share_group a:nth-child(4):hover li {
         background-color: #e91e63; }
+      footer ul.share_group a:nth-child(1) {
+        cursor: pointer; }
+      footer ul.share_group a:nth-child(1):hover li {
+        background-color: #0A9C0D; }
 
 @media screen and (max-device-width: 1024px) {
   main .category .card_group .works_card .card_description,

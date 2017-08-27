@@ -241,7 +241,7 @@ footer {
             size: 35px 35px;
         }
         padding-left: 45px;
-        margin: 6px 50px 10px 5%;
+        margin: 6px 10px 10px 5%;
         font-weight: 300;
         p {
             color: #888;
@@ -281,14 +281,20 @@ footer {
                 color: #fff;
                 @include link-transition(0.2s);
             }
-            &:nth-child(1):hover li {
+            &:nth-child(2):hover li {
                 background-color: #545454;
             }
-            &:nth-child(2):hover li {
+            &:nth-child(3):hover li {
                 background-color: #17b2ec;
             }
-            &:nth-child(3):hover li {
+            &:nth-child(4):hover li {
                 background-color: #e91e63;
+            }
+            &:nth-child(1) {
+                cursor: pointer;
+            }
+            &:nth-child(1):hover li {
+                background-color: #0A9C0D;
             }
         }
     }
