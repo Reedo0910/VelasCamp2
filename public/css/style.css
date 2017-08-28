@@ -228,9 +228,13 @@ footer {
     margin: 3px 5% 0 0;
     padding: 0; }
     footer ul.share_group a {
+      display: inline-block;
       color: #888;
       text-decoration: none;
       user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
@@ -243,8 +247,7 @@ footer {
         height: 20px;
         width: 20px;
         line-height: 20px;
-        text-align: center;
-        user-select: none; }
+        text-align: center; }
       footer ul.share_group a:hover li,
       footer ul.share_group a:active li {
         color: #fff;
