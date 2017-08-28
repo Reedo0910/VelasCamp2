@@ -68,7 +68,7 @@ var messages = {
             sharegroup: {
                 github: '访问我的Github页面',
                 email: '给我发邮件',
-                notice: '表示该页面适配移动设备。',
+                notice: ' 表示该页面适配移动设备。',
                 globe: '切换当前语言（英语）'                
             }
         }
