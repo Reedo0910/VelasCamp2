@@ -1,3 +1,6 @@
+// 为移动端绑定touchstart监听
+document.body.addEventListener('touchstart', function () {});
+
 var i18n = new VueI18n({
     locale: 'en',
     messages: messages,
@@ -33,7 +36,6 @@ var cardVM = new Vue({
             name: 'message.workscard.category.playground'
         }],
         worksCards: [{
-            id: 'Velas',
             name: 'message.workscard.title.velas',
             description: 'message.workscard.description.velas',
             image: './images/pic1.png',
@@ -41,7 +43,6 @@ var cardVM = new Vue({
             category: 'Website',
             mobile: true
         }, {
-            id: 'Velas Talk',
             name: 'message.workscard.title.talk',
             description: 'message.workscard.description.talk',
             image: './images/pic6.png',
@@ -49,7 +50,6 @@ var cardVM = new Vue({
             category: 'Website',
             mobile: true
         }, {
-            id: 'Chat Room',
             name: 'message.workscard.title.chatroom',
             description: 'message.workscard.description.chatroom',
             image: './images/pic2.png',
@@ -57,7 +57,6 @@ var cardVM = new Vue({
             category: 'Demo',
             mobile: true
         }, {
-            id: 'Aurora',
             name: 'message.workscard.title.aurora',
             description: 'message.workscard.description.aurora',
             image: './images/pic7.png',
@@ -65,7 +64,6 @@ var cardVM = new Vue({
             category: 'Demo',
             mobile: false
         }, {
-            id: 'Vue Login',
             name: 'message.workscard.title.vuelogin',
             description: 'message.workscard.description.vuelogin',
             image: './images/pic8.png',
@@ -73,7 +71,6 @@ var cardVM = new Vue({
             category: 'Playground',
             mobile: true
         }, {
-            id: 'Process Schedule',
             name: 'message.workscard.title.processschedule',
             description: 'message.workscard.description.processschedule',
             image: './images/pic3.png',
@@ -81,7 +78,6 @@ var cardVM = new Vue({
             category: 'Demo',
             mobile: true
         }, {
-            id: 'Save Whales',
             name: 'message.workscard.title.savewhales',
             description: 'message.workscard.description.savewhales',
             image: './images/pic5.png',
@@ -93,9 +89,10 @@ var cardVM = new Vue({
     computed: {
         filterCards: function () {
             var key = this.key;
+            var that = this;
             var worksCards = this.worksCards;
             return worksCards.filter(function (workscard) {
-                return workscard.id.toLowerCase().indexOf(key.toLowerCase()) != -1
+                return that.getMessage(workscard.name).toLowerCase().indexOf(key.toLowerCase()) != -1
             });
         }
     },

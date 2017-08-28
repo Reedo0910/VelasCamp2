@@ -201,7 +201,8 @@ main {
                     @include link-transition(0.2s);
                     box-shadow: #d6d6d6 0 0 20px;
                 }
-                &:hover {
+                &:hover,
+                &:active {
                     @include link-transition(0.2s);
                     border-color: #d2d2d2;
                     .card_title,
@@ -277,23 +278,28 @@ footer {
                 line-height: 20px;
                 text-align: center;
             }
-            &:hover li {
+            &:hover li,
+            &:active li {
                 color: #fff;
                 @include link-transition(0.2s);
             }
-            &:nth-child(2):hover li {
+            &:nth-child(2):hover li,
+            &:nth-child(2):active li {
                 background-color: #545454;
             }
-            &:nth-child(3):hover li {
+            &:nth-child(3):hover li,
+            &:nth-child(3):active li {
                 background-color: #17b2ec;
             }
-            &:nth-child(4):hover li {
+            &:nth-child(4):hover li,
+            &:nth-child(4):active li {
                 background-color: #e91e63;
             }
             &:nth-child(1) {
                 cursor: pointer;
             }
-            &:nth-child(1):hover li {
+            &:nth-child(1):hover li,
+            &:nth-child(1):active li {
                 background-color: #0A9C0D;
             }
         }

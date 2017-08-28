@@ -173,21 +173,23 @@ main {
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
         box-shadow: #d6d6d6 0 0 20px; }
-      main .category .card_group .works_card:hover {
+      main .category .card_group .works_card:hover, main .category .card_group .works_card:active {
         -webkit-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
         border-color: #d2d2d2; }
         main .category .card_group .works_card:hover .card_title,
         main .category .card_group .works_card:hover .card_description,
-        main .category .card_group .works_card:hover img {
+        main .category .card_group .works_card:hover img, main .category .card_group .works_card:active .card_title,
+        main .category .card_group .works_card:active .card_description,
+        main .category .card_group .works_card:active img {
           opacity: 1;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out; }
-        main .category .card_group .works_card:hover .card_title .title_text {
+        main .category .card_group .works_card:hover .card_title .title_text, main .category .card_group .works_card:active .card_title .title_text {
           overflow: visible; }
-        main .category .card_group .works_card:hover img {
+        main .category .card_group .works_card:hover img, main .category .card_group .works_card:active img {
           box-shadow: #ccc 0 0 30px; }
 
 footer {
@@ -241,20 +243,25 @@ footer {
         width: 20px;
         line-height: 20px;
         text-align: center; }
-      footer ul.share_group a:hover li {
+      footer ul.share_group a:hover li,
+      footer ul.share_group a:active li {
         color: #fff;
         -webkit-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out; }
-      footer ul.share_group a:nth-child(2):hover li {
+      footer ul.share_group a:nth-child(2):hover li,
+      footer ul.share_group a:nth-child(2):active li {
         background-color: #545454; }
-      footer ul.share_group a:nth-child(3):hover li {
+      footer ul.share_group a:nth-child(3):hover li,
+      footer ul.share_group a:nth-child(3):active li {
         background-color: #17b2ec; }
-      footer ul.share_group a:nth-child(4):hover li {
+      footer ul.share_group a:nth-child(4):hover li,
+      footer ul.share_group a:nth-child(4):active li {
         background-color: #e91e63; }
       footer ul.share_group a:nth-child(1) {
         cursor: pointer; }
-      footer ul.share_group a:nth-child(1):hover li {
+      footer ul.share_group a:nth-child(1):hover li,
+      footer ul.share_group a:nth-child(1):active li {
         background-color: #0A9C0D; }
 
 @media screen and (max-device-width: 1024px) {
