@@ -132,6 +132,7 @@ main {
       padding: 8px;
       position: relative;
       text-decoration: none;
+      outline: none;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
@@ -210,7 +211,11 @@ footer {
     background-size: 35px 35px;
     padding-left: 45px;
     margin: 6px 10px 10px 5%;
-    font-weight: 300; }
+    font-weight: 300;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; }
     footer .avatar p {
       color: #888;
       font-size: 10px;
@@ -235,6 +240,7 @@ footer {
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
+      outline: none;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }

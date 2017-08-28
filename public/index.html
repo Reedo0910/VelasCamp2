@@ -44,7 +44,7 @@
             <div class="category" v-for="category in categories">
                 <h3 class="category_title">{{ getMessage(category.name) }}<span>{{ categoryCount(category.id) }}</span></h3>
                 <div class="card_group">
-                    <a :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category === category.id">
+                    <a target="_blank" :href="workscard.url" class="works_card" v-for="workscard in filterCards" v-if="workscard.category === category.id">
                         <h2 class="card_title">
                             <div class="title_text">{{ getMessage(workscard.name) }}</div><i :class="workscard.mobile ? isAdapt : ''" aria-hidden="true"></i></h2>
                         <img :src="workscard.image">
@@ -55,12 +55,12 @@
         </div>
     </main>
     <footer>
-        <a class="avatar" id="avatar" href="https://github.com/Reedo0910">Zeee <p>Reedo0910</p></a>
+        <a class="avatar" id="avatar" href="https://github.com/Reedo0910" target="_blank">Zeee <p>Reedo0910</p></a>
         <ul class="share_group" id="share-group" v-cloak>
             <a @mouseenter="infoText=globeDescription, isInfoShow = true" @mouseleave="isInfoShow=false" @click="toggleLang">
                 <li class="fa fa-lg fa-globe" aria-hidden="true"></li>
             </a>
-            <a v-for="icon in shareIcons" :href="icon.url" @mouseenter="infoText=icon.description, isInfoShow = true" @mouseleave="isInfoShow=false">
+            <a v-for="icon in shareIcons" :href="icon.url" @mouseenter="infoText=icon.description, isInfoShow = true" @mouseleave="isInfoShow=false" target="_blank">
                 <li :class="icon.iconClass" class="fa fa-lg" aria-hidden="true"></li>
             </a>
         </ul>
