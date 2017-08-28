@@ -230,6 +230,7 @@ footer {
     footer ul.share_group a {
       color: #888;
       text-decoration: none;
+      user-select: none;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
@@ -242,7 +243,8 @@ footer {
         height: 20px;
         width: 20px;
         line-height: 20px;
-        text-align: center; }
+        text-align: center;
+        user-select: none; }
       footer ul.share_group a:hover li,
       footer ul.share_group a:active li {
         color: #fff;

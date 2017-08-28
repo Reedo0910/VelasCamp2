@@ -266,6 +266,7 @@ footer {
         a {
             color: #888;
             text-decoration: none;
+            user-select: none;            
             @include link-transition(0.2s);
             li {
                 border-radius: 50px;
@@ -277,6 +278,7 @@ footer {
                 width: 20px;
                 line-height: 20px;
                 text-align: center;
+                user-select: none;
             }
             &:hover li,
             &:active li {
