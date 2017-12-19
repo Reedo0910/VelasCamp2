@@ -212,9 +212,9 @@ main {
                         opacity: 1;
                         @include link-transition(0.2s);
                     }
-                    .card_title .title_text {
-                        overflow: visible;
-                    }
+                    // .card_title .title_text {
+                    //     overflow: visible;
+                    // }
                     img {
                         box-shadow: #ccc 0 0 30px;
                     }

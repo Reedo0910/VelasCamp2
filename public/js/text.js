@@ -15,7 +15,7 @@ var messages = {
                     chatroom: 'Chat Room',
                     aurora: 'Aurora',
                     vuelogin: 'Vue Login',
-                    processschedule: 'Process Schedule',
+                    processscheduling: 'Process Scheduling',
                     savewhales: 'Save Whales'
                 },
                 description: {
@@ -24,7 +24,7 @@ var messages = {
                     chatroom: 'A chat room demo based on React and Meteor.',
                     aurora: 'A music player based on HTML5.',
                     vuelogin: 'Use Vue to implement the user\'s personal information input card.',
-                    processschedule: 'A Course Design for Operating System Process Scheduling Model.',
+                    processscheduling: 'A Course Design for Operating System Process Scheduling Model.',
                     savewhales: 'Dedicated to whales protection and propaganda.'
                 }
             },
@@ -52,7 +52,7 @@ var messages = {
                     chatroom: '聊天室',
                     aurora: 'Aurora',
                     vuelogin: '信息卡片',
-                    processschedule: '进程调度',
+                    processscheduling: '进程调度',
                     savewhales: '拯救鲸鱼'
                 },
                 description: {
@@ -61,7 +61,7 @@ var messages = {
                     chatroom: '一个基于React和Meteor开发的聊天室实例。',
                     aurora: '一个基于HTML5的音乐播放器实例。',
                     vuelogin: '使用Vue实现的用户个人信息输入卡片。',
-                    processschedule: '关于操作系统进程调度模型的课程设计。',
+                    processscheduling: '关于操作系统进程调度模型的课程设计。',
                     savewhales: '致力于鲸鱼保护和宣传的网站。'
                 }
             },
