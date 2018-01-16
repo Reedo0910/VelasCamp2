@@ -188,6 +188,8 @@ main {
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out; }
+        main .category .card_group .works_card:hover .card_title .title_text, main .category .card_group .works_card:active .card_title .title_text {
+          overflow: visible; }
         main .category .card_group .works_card:hover img, main .category .card_group .works_card:active img {
           box-shadow: #ccc 0 0 30px; }
 
@@ -225,7 +227,7 @@ footer {
     padding: 4px;
     margin-right: 8px;
     color: #888;
-    font-family: FontAwesome 'NotoSansHans-Regular', "Microsoft YaHei", 微软雅黑, Arial, sans-serif; }
+    font-family: 'NotoSansHans-Regular', "Microsoft YaHei", 微软雅黑, Arial, sans-serif; }
   footer ul.share_group {
     float: right;
     margin: 3px 5% 0 0;

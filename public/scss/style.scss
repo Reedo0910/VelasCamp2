@@ -212,9 +212,9 @@ main {
                         opacity: 1;
                         @include link-transition(0.2s);
                     }
-                    // .card_title .title_text {
-                    //     overflow: visible;
-                    // }
+                    .card_title .title_text {
+                        overflow: visible;
+                    }
                     img {
                         box-shadow: #ccc 0 0 30px;
                     }
@@ -262,7 +262,7 @@ footer {
         padding: 4px;
         margin-right: 8px;
         color: #888;
-        font-family: FontAwesome 'NotoSansHans-Regular', "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+        font-family: 'NotoSansHans-Regular', "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
     }
     ul.share_group {
         float: right;

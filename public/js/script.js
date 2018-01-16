@@ -71,8 +71,8 @@ var cardVM = new Vue({
             category: 'Playground',
             mobile: true
         }, {
-            name: 'message.workscard.title.processscheduling',
-            description: 'message.workscard.description.processscheduling',
+            name: 'message.workscard.title.processscheduler',
+            description: 'message.workscard.description.processscheduler',
             image: './images/pic3.png',
             url: 'http://www.velascamp.cn/demo/1/index.html',
             category: 'Demo',
